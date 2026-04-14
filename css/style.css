@@ -220,3 +220,57 @@ body {
 .step p {
     color: #6B7280;
 }
+
+/* Testimonials */
+.testimonials {
+    padding: 80px 0;
+    background: white;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: #F9FAFB;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    transition: all 0.3s;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user h4 {
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.user span {
+    font-size: 0.8rem;
+    color: #6B7280;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}

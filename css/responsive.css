@@ -1,0 +1,102 @@
+/* Tablet */
+@media (max-width: 992px) {
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+}
+
+/* Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+}
+
+/* Hero Section */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+/* Features Section */
+/* Tablet */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* How it works */
+@media (max-width: 768px) {
+    .steps {
+        flex-direction: column;
+    }
+}
+
+/* Testimonials */
+@media (max-width: 992px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pricing */
+@media (max-width: 992px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popular {
+        transform: scale(1);
+    }
+}
+
+/* Footer */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

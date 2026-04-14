@@ -20,3 +20,51 @@ faqItems.forEach(item => {
         }
     });
 });
+
+// Contact From
+const form = document.getElementById('contactForm');
+
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Clear previous errors
+    document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+    let isValid = true;
+
+    // Name validation
+    if (nameInput.value.trim() === '') {
+        nameInput.nextElementSibling.textContent = "Name is required";
+        isValid = false;
+    }
+
+    // Email validation
+    if (emailInput.value.trim() === '') {
+        emailInput.nextElementSibling.textContent = "Email is required";
+        isValid = false;
+    } else if (!validateEmail(emailInput.value)) {
+        emailInput.nextElementSibling.textContent = "Enter a valid email";
+        isValid = false;
+    }
+
+    // Message validation
+    if (messageInput.value.trim() === '') {
+        messageInput.nextElementSibling.textContent = "Message cannot be empty";
+        isValid = false;
+    }
+
+    // If valid
+    if (isValid) {
+        alert("Form submitted successfully!");
+        form.reset();
+    }
+});
+
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}

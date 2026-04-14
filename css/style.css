@@ -395,6 +395,13 @@ body {
     font-weight: 500;
 }
 
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+}
+
 .form-group input,
 .form-group textarea {
     width: 100%;

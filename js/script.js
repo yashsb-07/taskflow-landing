@@ -59,9 +59,13 @@ form.addEventListener('submit', function(e) {
 
     // If valid
     if (isValid) {
-        alert("Form submitted successfully!");
+        showToast("Message sent successfully!");
         form.reset();
     }
+
+    if (!isValid) {
+    showToast("Please fix errors before submitting");
+}
 });
 
 function validateEmail(email) {
@@ -93,3 +97,15 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+/* Toast Message */
+function showToast(message) {
+    const toast = document.getElementById("toast");
+
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3000);
+}

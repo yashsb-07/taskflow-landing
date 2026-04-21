@@ -16,6 +16,18 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    padding: 80px 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.6;
+}
+
 /* Container */
 .container {
     width: 90%;
@@ -74,10 +86,12 @@ html {
     text-decoration: none;
     font-weight: 500;
     transition: background 0.3s;
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
     background-color: #4338CA;
+    transform: translateY(-2px);
 }
 
 /* Hero Section */
@@ -491,4 +505,23 @@ html {
 .toast.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* All Card */
+.feature-card,
+.testimonial-card,
+.pricing-card {
+    transition: all 0.3s ease;
 }
